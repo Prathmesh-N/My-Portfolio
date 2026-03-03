@@ -1,0 +1,159 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap");
+
+:root {
+  --bg-light: #ffffff;
+  --text-main: #111827;
+  --text-soft: #6b7280;
+  --primary: #2563eb;
+  --panel: #ffffff;
+  --panel-border: #e5e7eb;
+}
+
+.landing-wrap {
+  min-height: calc(100vh - 62px);
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  padding: clamp(1.25rem, 4vw, 3rem) clamp(1rem, 4vw, 3.8rem);
+  background: var(--bg-light);
+  color: var(--text-main);
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  box-sizing: border-box;
+}
+
+.landing-glow,
+.landing-glow-one,
+.landing-glow-two {
+  display: none;
+}
+
+.landing {
+  width: min(720px, 100%);
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 20px;
+  padding: clamp(1.25rem, 2.6vw, 2rem);
+  box-shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
+  animation: rise-in 0.7s ease-out both;
+}
+
+.eyebrow {
+  margin: 0 0 0.95rem;
+  color: var(--primary);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.landing h1 {
+  margin: 0 0 1rem;
+  max-width: 18ch;
+  line-height: 1.06;
+  font-size: clamp(2rem, 5.8vw, 3.55rem);
+}
+
+.lead {
+  margin: 0;
+  max-width: 58ch;
+  color: var(--text-soft);
+  line-height: 1.6;
+  font-size: clamp(1rem, 2.2vw, 1.12rem);
+}
+
+.actions {
+  margin-top: 1.8rem;
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 700;
+  padding: 0.84rem 1.3rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-primary {
+  color: #ffffff;
+  background: var(--primary);
+  border: 1px solid var(--primary);
+  box-shadow: 0 2px 6px rgba(17, 24, 39, 0.12);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  transform: translateY(-1px);
+  background: #1d4ed8;
+}
+
+.btn-secondary {
+  color: var(--text-main);
+  border: 1px solid var(--panel-border);
+  background: var(--panel);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  transform: translateY(-1px);
+  background: #f9fafb;
+}
+
+.login-text {
+  margin-top: 1rem;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 860px) {
+  .landing-wrap {
+    padding: 1rem;
+  }
+
+  .landing {
+    text-align: center;
+  }
+
+  .landing h1,
+  .lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .landing {
+    border-radius: 16px;
+    padding: 1.2rem;
+  }
+
+  .actions {
+    width: 100%;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}
