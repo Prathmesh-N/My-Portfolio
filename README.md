@@ -1,4 +1,4 @@
-# Portfolio (MERN Stack)
+﻿# Portfolio (MERN Stack)
 
 A full-stack personal portfolio application with:
 - Public landing page
@@ -16,29 +16,29 @@ A full-stack personal portfolio application with:
 
 ```text
 Portfolio/
-├─ frontend/
-│  ├─ public/
-│  │  ├─ assets/
-│  │  └─ Prathmesh_resume.pdf
-│  ├─ src/
-│  │  ├─ pages/
-│  │  │  ├─ dashboard/
-│  │  │  ├─ login/
-│  │  │  ├─ signup/
-│  │  │  ├─ styles/
-│  │  │  └─ landing.jsx
-│  │  └─ index.js
-│  └─ package.json
-├─ backend/
-│  ├─ src/
-│  │  ├─ config/db.js
-│  │  ├─ controllers/authController.js
-│  │  ├─ middleware/authMiddleware.js
-│  │  ├─ models/user.js
-│  │  ├─ routes/authRoutes.js
-│  │  └─ app.js
-│  └─ package.json
-└─ .gitignore
++- frontend/
+|  +- public/
+|  |  +- assets/
+|  |  +- Prathmesh_resume.pdf
+|  +- src/
+|  |  +- pages/
+|  |  |  +- dashboard/
+|  |  |  +- login/
+|  |  |  +- signup/
+|  |  |  +- styles/
+|  |  |  +- landing.jsx
+|  |  +- index.js
+|  +- package.json
++- backend/
+|  +- src/
+|  |  +- config/db.js
+|  |  +- controllers/authController.js
+|  |  +- middleware/authMiddleware.js
+|  |  +- models/user.js
+|  |  +- routes/authRoutes.js
+|  |  +- app.js
+|  +- package.json
++- .gitignore
 ```
 
 ## Features
