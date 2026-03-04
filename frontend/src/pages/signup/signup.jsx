@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import "./signup.css";
 import Footer from "../dashboard/Footer";
 
+const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+
 function Signup() {
   const navigate = useNavigate();
   const [form, setForm] = useState({ name: "", email: "", password: "" });
@@ -26,7 +28,7 @@ function Signup() {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:5000/api/auth/signup", {
+      const response = await fetch(`${API_BASE_URL}/api/auth/signup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),

@@ -59,6 +59,7 @@ function Projects() {
           </a>
         </div>
       </section>
+
     </main>
   );
 }
